@@ -1,5 +1,5 @@
 
-# UW MediQA
+# UW-BHI at MediQA 2019
 Team members:  
 * William R. Kearns
 * Wilson Lau  
