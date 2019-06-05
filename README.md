@@ -5,6 +5,6 @@ Team members:
 * Wilson Lau  
 * Jason Thomas
 
-Project page: https://kearnsw.github.io/MEDIQA-2019
+Project page: https://kearnsw.github.io/MEDIQA-2019/
 
 
