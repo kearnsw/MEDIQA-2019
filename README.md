@@ -3,7 +3,7 @@
 Team members:  
 * William R. Kearns
 * Wilson Lau  
-* Jason Thomas
+* Jason A. Thomas
 
 Project page: https://kearnsw.github.io/MEDIQA-2019/
 
