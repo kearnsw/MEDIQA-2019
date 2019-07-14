@@ -1,0 +1,137 @@
+<!DOCTYPE HTML>
+<html xml:lang="en" lang="en">
+<head>
+  <link rel="stylesheet" href="assets/css/flexslider.css" type="text/css" media="screen" />
+  <title>UW-BHI at MEDIQA 2019</title>
+  <style>
+* { padding: 0; margin: 0; }
+
+body {
+  margin: 0 auto 0 auto;
+  padding: 0;
+  background-color: #33333f;
+  width: 840px;
+  font-family: "Avenir", "Avenir Next", Helvetica Neue, Arial;
+  font-size: 0.95em;
+}
+
+a, a:visited { text-decoration: none; color: #7533f4; }
+a:hover { text-decoration: underline; color: #f4b014; }
+img, a.img, a:hover.img { border: none; }
+
+img {
+  max-width: 800px;
+}
+
+h1, h2, h3, h4, h5 {
+  color: #492a7c;
+  background-color: inherit;
+  font-weight: normal;
+  padding: 0 0 5px 0;
+  margin: 15px 0 0 0;
+  border: none;
+  clear: right;
+}
+h1 { font-size: 18pt; margin:  5px 0 10px 0; line-height: 28px; }
+h2 { font-size: 14pt; margin: 30px 0 15px 0; letter-spacing: 0.01em; border-bottom: 1px solid #ccc;  line-height: 20px;}
+h3 { font-size: 13pt; }
+h4 { font-size: 12pt; }
+h5 { font-size: 11pt; }
+p { margin: 0 0 10px 0; }
+hr { border: 0px; border-top: 1px solid #ccc; height: 0px; }
+ol { margin: 1em; }
+
+.content {
+  margin: 0;
+  padding: 15px 20px;
+  background-color: #ffffff;
+}
+
+.article {
+  line-height: 1.5em;
+}
+
+.entry  {
+  border-top: 1px solid #ddd;
+  padding-top: 2px;
+  margin-top: 3em;
+}
+  </style>
+<!-- jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.min.js">\x3C/script>')</script>
+
+  <!-- FlexSlider -->
+  <script defer src="assets/js/jquery.flexslider.js"></script>
+
+  <script type="text/javascript">
+    $(window).load(function(){
+      for(let i=1; i<405; i++){
+        $('#carousel .slides').append(`<li><img src="assets/heatmaps/` + i + `.png"/></li>`);
+        $('#slider .slides').append(`<li>Pair ` + i + `<img src="assets/heatmaps/` + i + `.png" /></li>`);
+      }
+        // The slider being synced must be initialized first
+        $('#carousel').flexslider({
+          animation: "slide",
+          controlNav: false,
+          animationLoop: false,
+          slideshow: false,
+          itemWidth: 210,
+          itemMargin: 5,
+          asNavFor: '#slider'
+        });
+
+        $('#slider').flexslider({
+          animation: "slide",
+          controlNav: false,
+          animationLoop: false,
+          slideshow: false,
+          sync: "#carousel"
+        });
+      });
+  </script>  
+</head>
+
+
+<body>
+<div class='content'>
+
+<section>
+  <h1>UW-BHI at MEDIQA 2019: An Analysis of Representation Methods for Medical Natural Language Inference</h1>
+
+  <p>
+    <strong>William R. Kearns, Wilson Lau, Jason Thomas</strong> &mdash;
+    <em>kearnsw@uw.edu</em>
+  </p>
+</section>
+
+<section>
+  <h2>Abstract</h2>
+
+  <p>
+    Recent advances in language modeling have led to large performance increases on a variety of natural language processing (NLP) tasks. However, it is not well understood how these methods may be augmented by knowledge-based approaches. This paper compares the performance and internal representation of an Enhanced Sequential Inference Model (ESIM) between three experimental conditions based on the input to the model, i.e. Bidirectional Encoder Representations from Transformers (BERT), Embeddings of Semantic Predications (ESP), or Word2Vec. We evaluated performance on the Medical Natural Language Inference (MedNLI) sub-task of the MEDIQA 2019 shared-task which relied heavily on semantic understanding and thus served as a suitable evaluation set for the comparison of these representation methods.
+  </p>
+
+  <p>
+    The data is available online at:
+    <strong>
+      <a href="DATASET-URL-HERE">DATASET-URL-HERE</a>
+    </strong>
+  </p>
+</section>
+
+  <section class="slider">
+    <div id="slider" class="flexslider">
+      <ul class="slides">
+      </ul>
+    </div>
+
+  <div id="carousel" class="flexslider">
+    <ul class="slides">
+    </ul>
+  </div>
+  </section>
+</div>
+  
+</body>
+</html>
